@@ -1,0 +1,10 @@
+services:
+  core:
+    build: 
+        dockerfile: Dockerfile
+        context: .
+    environment:
+         POSTGRES_CONN: ${POSTGRES_CONN}
+         SERVER_ADDRESS: ${SERVER_ADDRESS}
+    ports:
+     - 8080:8080
